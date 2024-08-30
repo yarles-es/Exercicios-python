@@ -5,13 +5,13 @@ import json
 def leitura_do_arquivo():
     with open('zoologico.json', 'r') as file:
         dados = json.load(file)
-        print(dados)
     return dados 
 
 # filtrar todos  animais femea
 
 def filtrar_animais_femea():
-    pass
+    animais = leitura_do_arquivo()["animais"]
+    
 
 # filtrar todos os animais machos acima de 4 anos de idade
 def filtrar_animais_machos_acima_de_4_anos_de_idade():
@@ -81,7 +81,4 @@ def reescrever_genero_dos_animais(animais):
     pass
 
 if __name__ == "__main__":
-    pass
-    # leitura_do_arquivo() // exemplo de execução da função de leitura do arquivo
-
-    # adicione aqui as funções que vc quer rodar ao digitar python exercicios_01.py no terminal para visualizar os resultados
+    filtrar_animais_femea()
